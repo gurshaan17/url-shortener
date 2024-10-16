@@ -11,7 +11,7 @@ async function startServer() {
     try {
         await connectDB();
         app.post('/shorten', shorten);
-        app.get('/short', shortUrl);
+        app.get('/:id', shortUrl);
 
         app.listen(3000);
     } catch (err) {
