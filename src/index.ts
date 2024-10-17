@@ -10,6 +10,9 @@ app.use(express.json())
 async function startServer() {
     try {
         await connectDB();
+        app.get('/',(req,res)=>{
+            res.status(200).json({ message: "Server working fine"})
+        })
         app.post('/shorten', shorten);
         app.get('/:id', shortUrl);
 
