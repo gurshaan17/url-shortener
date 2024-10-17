@@ -9,7 +9,7 @@ const API_URL = process.env.API_URL
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: `${API_URL}`, // Replace with your frontend URL
+    origin: [`${API_URL}`, "http://localhost:3000"],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type']
 }));
