@@ -7,12 +7,9 @@ require("dotenv").config();
 
 const API_URL = process.env.API_URL
 const app = express()
+console.log(API_URL)
 app.use(express.json())
-app.use(cors({
-    origin: [`${API_URL}`, "http://localhost:3000"],
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type']
-}));
+app.use(cors());
 
 async function startServer() {
     try {
