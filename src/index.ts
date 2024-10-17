@@ -16,7 +16,7 @@ async function startServer() {
         app.post('/shorten', shorten);
         app.get('/:id', shortUrl);
 
-        app.listen(3000);
+        app.listen(3001);
     } catch (err) {
         console.error("Failed to start server:", err);
     }
