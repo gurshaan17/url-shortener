@@ -7,7 +7,6 @@ require("dotenv").config();
 
 const API_URL = process.env.API_URL
 const app = express()
-console.log(API_URL)
 app.use(express.json())
 app.use(cors());
 
