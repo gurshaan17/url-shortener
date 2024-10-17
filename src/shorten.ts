@@ -4,6 +4,7 @@ import { dataModel } from "./db";
 
 export async function shorten(req: Request,res: Response){
     try{
+        console.log('Request body:', req.body);
         const longUrl: string = req.body.url;
         if(!longUrl){
             res.status(400).json({ message: "URL is required"})
@@ -26,7 +27,7 @@ export async function shorten(req: Request,res: Response){
                     id: randomId,
                     shortUrl: shortUrl,
                     longUrl: longUrl
-            }
+                }
         })
     }
     
